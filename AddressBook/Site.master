@@ -1,0 +1,44 @@
+<%@ Master Language="C#" Inherits="TicketTrack.Site" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+<head runat="server">
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+	<title><asp:ContentPlaceHolder id="titlePlaceHolder" runat="server" /></title>
+	<asp:ContentPlaceHolder id="headerPlaceHolder" runat="server" />
+</head>
+<body>
+<div id="container">
+<form runat="server">
+    <table width="800px"  style="height: 270px;">
+        <col width="200px" />
+        <col />
+        <tr style="height:50px;">
+            <td class="mainMenu">
+                <label>Main menu:</label>
+            </td>
+            <td class="mainMenu">
+                <h3>The ASP.NET Address Book</h3>
+            </td>
+        </tr>
+        <tr>
+            <td class="mainMenu" style="vertical-align:top;">
+                <ul title="Please Select from the list below:">
+				    <li><a href="AddressBook.aspx">Manage Address Book</a></li>
+				    <li><a href="EditUser.aspx">Add New User</a></li>
+			    </ul>                
+            </td>
+            <td valign="top">
+                <asp:contentplaceholder id="contentPlaceHolder" runat="server" /> 
+            </td>
+        </tr>
+        <tr>
+            <td class="mainMenu">
+            </td>
+            <td class="mainMenu">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+</html>
